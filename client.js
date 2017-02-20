@@ -1,12 +1,14 @@
+// I tried to be more efficient and use variables, but could not get it to work in conjunction with the .data method
+
 $(document).ready(function() {
     console.log('working');
     var colorCount = 0;
     var redCount = 0;
     var yellowCount = 0;
-    var blueCount = 0;
+    var rainbowCount = 0;
     var greenCount = 0;
 
-    var colorBox = [red, yellow, green, blue];
+    // var colorBox = [red, yellow, green, blue];
 
     $('.color-button').on('click', $(this).data('color'), function() {
         console.log('The ' + $(this).data('color') + ' color was clicked.');
@@ -21,11 +23,11 @@ $(document).ready(function() {
             yellowCount++;
             console.log(yellowCount);
             $('#yellow').html(yellowCount);
-        } else if ($(this).data('color')=='blue') {
-            $('body').append('<div class="color-cube blue"></div>');
-            blueCount++;
-            console.log(blueCount);
-            $('#blue').html(blueCount);
+        } else if ($(this).data('color')=='rainbow') {
+            $('body').append('<div class="color-cube rainbow"></div>');
+            rainbowCount++;
+            console.log(rainbowCount);
+            $('#rainbow').html(rainbowCount);
         } else if ($(this).data('color')=='green') {
             $('body').append('<div class="color-cube green"></div>');
             greenCount++;
